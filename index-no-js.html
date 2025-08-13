@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="description" content="Funny® is the design work of Daniele Buffa, roman designer, now based in London, UK. Currently Staff Product Designer @ Spotify."/>
+    <meta property="og:description" content="Funny® is the design work of Daniele Buffa, roman designer, now based in London, UK. Currently Staff Product Designer @ Spotify."/>
+    <title>Design is Funny</title>
+    <meta name="theme-color" content="#D4CFC4"/>
+    <link rel="icon" href="/favicon/favicon.svg"/>
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-180x180.png"/>
+    <link rel="mask-icon" href="/favicon/safari-mask-icon.svg" color="#343434"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:site_name" content="Design is Funny"/>
+    
+    <!-- Font preloads -->
+    <link rel="preload" href="/_next/static/media/7dab8af39163f728-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="/_next/static/media/59a3929caf515386-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="/_next/static/media/90146ab805c0a002-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="/_next/static/media/f8aeb667dc70466a-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/_next/static/css/9a3cc8544e478ad5.css"/>
+    
+    <!-- Analytics (non-blocking) -->
+    <script async>
+        // GTM with fixed timestamp to prevent hydration issues
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': 1755000000000, event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N7RGVKG');
+    </script>
+    
+    <!-- Preload and disable problematic scripts -->
+    <script>
+        // Disable React hydration completely
+        window.__NEXT_HYDRATE__ = false;
+        
+        // Suppress React errors
+        const originalError = console.error;
+        console.error = function(...args) {
+            const message = String(args[0] || '');
+            if (message.includes('Minified React error') || 
+                message.includes('hydration') ||
+                message.includes('Hydration')) {
+                return; // Suppress React errors
+            }
+            originalError.apply(console, args);
+        };
+    </script>
+    
+    <style>
+        .animate-text-word {
+            perspective: 800px;
+            margin-bottom: -.28ch;
+            padding-bottom: .28ch;
+            margin-right: -.03ch;
+            padding-right: .03ch;
+        }
+        
+        header {
+            height: 100vh;
+        }
+        
+        @supports(height: 100svh) {
+            header {
+                height: 100svh;
+            }
+        }
+        
+        @media(min-width: 992px) {
+            header {
+                height: calc(100vh - var(--site-header-height));
+            }
+            
+            @supports(height: 100svh) {
+                header {
+                    height: calc(100svh - var(--site-header-height));
+                }
+            }
+        }
+        
+        .line {
+            transition: transform .5s cubic-bezier(.22,1,.36,1), opacity .5s linear;
+        }
+        
+        /* Basic styling without JS dependencies */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family, -apple-system, BlinkMacSystemFont, sans-serif);
+        }
+        
+        .main-content {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .portfolio-title {
+            font-size: clamp(2rem, 8vw, 6rem);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-subtitle {
+            font-size: clamp(1rem, 4vw, 2rem);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .portfolio-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .portfolio-link {
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1 class="portfolio-title">Design is Funny</h1>
+        <p class="portfolio-subtitle">Portfolio of Daniele Buffa</p>
+        
+        <nav class="portfolio-nav">
+            <a href="project/cashapp.html" class="portfolio-link">Cashapp</a>
+            <a href="project/dstv-rewards.html" class="portfolio-link">DSTV Rewards</a>
+            <a href="project/standard-bank-insurance.html" class="portfolio-link">Standard Bank Insurance</a>
+            <a href="project/beck-taxi.html" class="portfolio-link">Beck Taxi</a>
+        </nav>
+    </div>
+    
+    <!-- Simple page preloader without React dependencies -->
+    <script defer src="/preload-pages.js"></script>
+</body>
+</html>

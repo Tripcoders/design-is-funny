@@ -5,16 +5,18 @@
 
 (function() {
     'use strict';
+
+    // Guard against SSR execution
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+        return;
+    }
     
     // List of all project pages to preload
     const PROJECT_PAGES = [
-        'project/synththeatre.html',
-        'project/headspace.html',
-        'project/insider.html',
-        'project/fresco.html',
-        'project/web3-misc.html',
-        'project/the-yes.html',
-        'project/google-arts-culture.html'
+        'project/cashapp.html',
+        'project/dstv-rewards.html',
+        'project/standard-bank-insurance.html',
+        'project/beck-taxi.html'
     ];
     
     // Cache for preloaded content
@@ -103,11 +105,16 @@
         }, 1000);
     }
     
-    // Initialize preloader
+    // Initialize preloader after React hydration
+    function safeInitPreloader() {
+        // Wait for React hydration to complete
+        setTimeout(initPreloader, 2000);
+    }
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initPreloader);
+        document.addEventListener('DOMContentLoaded', safeInitPreloader);
     } else {
-        initPreloader();
+        safeInitPreloader();
     }
     
     // Preload pages on hover for instant loading
@@ -125,8 +132,8 @@
         });
     }
     
-    // Setup hover preloading after a delay
-    setTimeout(setupHoverPreloading, 2000);
+    // Setup hover preloading after React hydration completes
+    setTimeout(setupHoverPreloading, 4000);
     
 })();
 
@@ -135,6 +142,11 @@
  */
 (function() {
     'use strict';
+
+    // Guard against SSR execution
+    if (typeof window === 'undefined') {
+        return;
+    }
     
     // Wait for preloader to be available
     function waitForPreloader() {

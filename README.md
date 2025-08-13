@@ -1,4 +1,4 @@
-# Design is Funny - Creative Portfolio
+# Designer X - Freelance Portfolio
 
 A stunning creative portfolio website featuring 3D animations, smooth AJAX transitions, and interactive design elements.
 
