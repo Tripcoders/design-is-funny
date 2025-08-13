@@ -108,11 +108,16 @@
         }, 1000);
     }
     
-    // Initialize preloader
+    // Initialize preloader after React hydration
+    function safeInitPreloader() {
+        // Wait for React hydration to complete
+        setTimeout(initPreloader, 2000);
+    }
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initPreloader);
+        document.addEventListener('DOMContentLoaded', safeInitPreloader);
     } else {
-        initPreloader();
+        safeInitPreloader();
     }
     
     // Preload pages on hover for instant loading
