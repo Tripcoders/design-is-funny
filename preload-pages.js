@@ -13,7 +13,7 @@
     
     // List of all project pages to preload
     const PROJECT_PAGES = [
-        'project/cashapp.html',
+        'project/synththeatre.html',
         'project/headspace.html',
         'project/insider.html',
         'project/fresco.html',
