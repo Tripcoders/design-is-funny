@@ -135,8 +135,8 @@
         });
     }
     
-    // Setup hover preloading after a delay
-    setTimeout(setupHoverPreloading, 2000);
+    // Setup hover preloading after React hydration completes
+    setTimeout(setupHoverPreloading, 4000);
     
 })();
 
