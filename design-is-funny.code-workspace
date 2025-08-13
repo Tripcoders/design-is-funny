@@ -1,0 +1,54 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": false
+    },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "liveServer.settings.port": 3000,
+    "liveServer.settings.root": "/",
+    "workbench.startupEditor": "readme"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-github-pullrequest",
+      "vercel.vercel-vscode",
+      "mhutchie.git-graph",
+      "ritwickdey.liveserver",
+      "ms-vscode.vscode-json"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Local Server",
+        "type": "shell",
+        "command": "python",
+        "args": ["-m", "http.server", "3000"],
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "new"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Open in Browser",
+        "type": "shell",
+        "command": "start",
+        "args": ["http://localhost:3000"],
+        "group": "test",
+        "dependsOn": "Start Local Server"
+      }
+    ]
+  }
+}

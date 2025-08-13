@@ -1,0 +1,28 @@
+{
+  "name": "design-is-funny-portfolio",
+  "version": "1.0.0",
+  "description": "Design is Funny - Creative Portfolio Website with 3D animations and smooth transitions",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "start": "python -m http.server 3000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "design",
+    "3d",
+    "animations",
+    "creative",
+    "threejs",
+    "gsap"
+  ],
+  "author": "Design is Funny",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tripcoders/design-is-funny.git"
+  },
+  "homepage": "https://design-is-funny.vercel.app"
+}
