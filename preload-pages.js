@@ -13,13 +13,10 @@
     
     // List of all project pages to preload
     const PROJECT_PAGES = [
-        'project/synththeatre.html',
-        'project/headspace.html',
-        'project/insider.html',
-        'project/fresco.html',
-        'project/web3-misc.html',
-        'project/the-yes.html',
-        'project/google-arts-culture.html'
+        'project/cashapp.html',
+        'project/dstv-rewards.html',
+        'project/standard-bank-insurance.html',
+        'project/beck-taxi.html'
     ];
     
     // Cache for preloaded content
