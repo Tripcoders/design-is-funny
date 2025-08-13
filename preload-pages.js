@@ -140,6 +140,11 @@
  */
 (function() {
     'use strict';
+
+    // Guard against SSR execution
+    if (typeof window === 'undefined') {
+        return;
+    }
     
     // Wait for preloader to be available
     function waitForPreloader() {
