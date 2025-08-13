@@ -5,6 +5,11 @@
 
 (function() {
     'use strict';
+
+    // Guard against SSR execution
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+        return;
+    }
     
     // List of all project pages to preload
     const PROJECT_PAGES = [
